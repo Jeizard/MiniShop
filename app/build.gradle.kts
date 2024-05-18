@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.jeizard.minishop"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.jeizard.minishop"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,9 +33,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    //fake data
+    implementation("com.github.javafaker:javafaker:1.0.2")
+
+    //img
+    implementation("com.github.bumptech.glide:glide:4.11.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
